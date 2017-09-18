@@ -47,7 +47,7 @@ module.exports = class extends Generator {
         }
       );
 
-      this.fs.copyTpl(
+      this.fs.copy(
         this.templatePath('_build.xml'),
          this.destinationPath('build.xml'),
          {
