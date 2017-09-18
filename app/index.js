@@ -21,7 +21,7 @@ module.exports = class extends Generator {
     }, {
       type    : 'input',
       name    : 'description',
-      message : 'project URL',
+      message : 'description',
       default : 'My first plugin'
     }]).then((answers) => {
       mkdirp.sync('js');
