@@ -16,11 +16,11 @@ module.exports = class extends Generator {
     }, {
       type    : 'input',
       name    : 'url',
-      message : 'URL',
+      message : 'Your project URL',
       default : 'https://kopano.com'
     }, {
       type    : 'input',
-      name    : 'description',
+      name    : 'Your project description',
       message : 'description',
       default : 'My first plugin'
     }]).then((answers) => {
