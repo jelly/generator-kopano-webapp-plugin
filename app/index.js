@@ -24,8 +24,6 @@ module.exports = class extends Generator {
       message : 'project URL',
       default : 'My first plugin'
     }]).then((answers) => {
-      this.log('app name', answers.name);
-      this.log('author', answers.author);
       mkdirp.sync('js');
       this.fs.copyTpl(
         this.templatePath('_manifest.xml'),
