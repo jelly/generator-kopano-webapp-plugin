@@ -16,7 +16,7 @@ module.exports = class extends Generator {
     }, {
       type    : 'input',
       name    : 'url',
-      message : 'project URL',
+      message : 'URL',
       default : 'https://kopano.com'
     }, {
       type    : 'input',
