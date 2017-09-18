@@ -2,7 +2,7 @@
 /**
  * <%= name %> Plugin
  */
-class Plugin<%= name %> extends Plugin {
+class <%= classname %> extends Plugin {
 
     function __construct(){}
 

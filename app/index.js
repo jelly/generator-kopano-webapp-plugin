@@ -1,6 +1,8 @@
 const mkdirp = require("mkdirp");
 const Generator = require('yeoman-generator');
 
+const capitalizeFirstLetter = (name) => name.charAt(0).toUpperCase() + name.slice(1);
+
 module.exports = class extends Generator {
   prompting() {
     return this.prompt([{
@@ -20,52 +22,42 @@ module.exports = class extends Generator {
       default : 'https://kopano.com'
     }, {
       type    : 'input',
-      name    : 'Your project description',
-      message : 'description',
+      name    : 'description',
+      message : 'Your project description',
       default : 'My first plugin'
     }, {
       type    : 'confirm',
       name    : 'php',
       message : 'PHP pluginn',
     }]).then((answers) => {
+      answers.classname = 'Plugin' + capitalizeFirstLetter(answers.name);
+      this.log(answers);
+
       if (answers.php) {
         mkdirp.sync('php');
         this.fs.copyTpl(
           this.templatePath('_plugin.php'),
-           this.destinationPath('php/plugin.' + answers.name + '.php'),
-           {
-             name: answers.name,
-           }
+            this.destinationPath('php/plugin.' + answers.name + '.php'),
+             answers
         );
       }
 
       mkdirp.sync('js');
       this.fs.copyTpl(
         this.templatePath('_manifest.xml'),
-         this.destinationPath('manifest.xml'),
-         {
-           name: answers.name,
-           author: answers.author,
-           url: answers.url,
-           description: answers.description,
-           php: answers.php
-        }
+          this.destinationPath('manifest.xml'),
+            answers
       );
 
       this.fs.copyTpl(
         this.templatePath('_plugin.js'),
-         this.destinationPath('js/' + answers.name + '.js'),
-         {
-           name: answers.name,
-           classname: 'Plugin' + answers.name,
-        }
+          this.destinationPath('js/' + answers.name + '.js'),
+            answers
       );
 
       this.fs.copy(
         this.templatePath('_build.xml'),
-         this.destinationPath('build.xml'),
-         {
-         }
+         this.destinationPath('build.xml')
       );
     });
   }
