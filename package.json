@@ -5,7 +5,7 @@
   "homepage": "https://github.com/jelly/generator-kopano-webapp-plugin",
   "bugs": "https://github.com/jelly/generator-kopano-webapp-plugin/issues",
   "files": [
-    "generators"
+    "app"
   ],
   "keywords": [
     "yeoman-generator"
