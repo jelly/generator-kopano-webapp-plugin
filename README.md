@@ -1,4 +1,4 @@
-# generator-kopano-webapp-plugin
+# generator-kopano-webapp-plugin [![Build Status](https://secure.travis-ci.org/jelly/generator-kopano-webapp-plugin.png?branch=master)](https://travis-ci.org/jelly/generator-kopano-webapp-plugin)
 
 The Kopano WebApp plugin generator for [Yeoman](http://yeoman.io). This generator is intended to aid plugin development for Kopano WebApp.
 
