@@ -14,7 +14,7 @@
   "license": "AGPL-3.0",
   "repository": "jelly/generator-kopano-webapp-plugin",
   "scripts": {
-    "lint": "eslint app/index.js"
+    "test": "eslint app/index.js"
   },
   "dependencies": {
     "yeoman-generator": "^2.0.0"
