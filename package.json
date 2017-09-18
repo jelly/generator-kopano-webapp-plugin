@@ -1,0 +1,16 @@
+{
+  "name": "generator-kopano-webapp",
+  "version": "0.1.0",
+  "description": "Kopano WebApp Plugin Generator",
+  "files": [
+    "generators"
+  ],
+  "keywords": [
+    "yeoman-generator"
+  ],
+  "author": "Jelle van der Waa",
+  "license": "AGPL-3.0",
+  "dependencies": {
+    "yeoman-generator": "^2.0.0"
+  }
+}

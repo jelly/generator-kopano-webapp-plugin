@@ -1,0 +1,23 @@
+<?xml version="1.0"?>
+<!DOCTYPE plugin SYSTEM "manifest.dtd">
+<plugin version="2">
+	<info>
+		<version>0.1</version>
+		<name><%= name %></name>
+		<title><%= name %> Plugin</title>
+		<author><%= author %></author>
+		<authorURL><%= url %></authorURL>
+		<description><%= description %></description>
+	</info>
+	<components>
+		<component>
+			<files>
+				<client>
+					<clientfile load="release">js/<%= name %>.js</clientfile>
+					<clientfile load="debug">js/<%= name %>.js</clientfile>
+					<clientfile load="source">js/<%= name %>.js</clientfile>
+				</client>
+			</files>
+		</component>
+	</components>
+</plugin>
