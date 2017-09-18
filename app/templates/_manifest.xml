@@ -12,6 +12,11 @@
 	<components>
 		<component>
 			<files>
+        <% if (php) { %>
+				<server>
+					<serverfile>php/plugin.<%= name %>.php</serverfile>
+				</server>
+        <% } %>
 				<client>
 					<clientfile load="release">js/<%= name %>.js</clientfile>
 					<clientfile load="debug">js/<%= name %>.js</clientfile>

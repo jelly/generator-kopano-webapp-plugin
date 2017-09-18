@@ -23,7 +23,22 @@ module.exports = class extends Generator {
       name    : 'Your project description',
       message : 'description',
       default : 'My first plugin'
+    }, {
+      type    : 'confirm',
+      name    : 'php',
+      message : 'PHP pluginn',
     }]).then((answers) => {
+      if (answers.php) {
+        mkdirp.sync('php');
+        this.fs.copyTpl(
+          this.templatePath('_plugin.php'),
+           this.destinationPath('php/plugin.' + answers.name + '.php'),
+           {
+             name: answers.name,
+           }
+        );
+      }
+
       mkdirp.sync('js');
       this.fs.copyTpl(
         this.templatePath('_manifest.xml'),
@@ -33,6 +48,7 @@ module.exports = class extends Generator {
            author: answers.author,
            url: answers.url,
            description: answers.description,
+           php: answers.php
         }
       );
 
