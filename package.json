@@ -2,6 +2,8 @@
   "name": "generator-kopano-webapp",
   "version": "0.1.0",
   "description": "Kopano WebApp Plugin Generator",
+  "homepage": "https://github.com/jelly/generator-kopano-webapp-plugin",
+  "bugs": "https://github.com/jelly/generator-kopano-webapp-plugin/issues",
   "files": [
     "generators"
   ],
@@ -10,6 +12,7 @@
   ],
   "author": "Jelle van der Waa",
   "license": "AGPL-3.0",
+  "repository": "jelly/generator-kopano-webapp-plugin",
   "dependencies": {
     "yeoman-generator": "^2.0.0"
   }
