@@ -36,7 +36,7 @@ module.exports = class extends Generator {
            author: answers.author,
            url: answers.url,
            description: answers.description,
-	 }
+        }
       ); 
 
       this.fs.copyTpl(
@@ -45,14 +45,14 @@ module.exports = class extends Generator {
          { 
            name: answers.name,
            classname: 'Plugin' + answers.name,
-	 }
+        }
       ); 
 
       this.fs.copyTpl(
         this.templatePath('_build.xml'),
          this.destinationPath('build.xml'),
          {
-	 }
+         }
       ); 
     });
   }
