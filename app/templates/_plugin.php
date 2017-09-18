@@ -38,7 +38,7 @@ class Plugin<%= name %> extends Plugin {
             'zarafa' => Array(
                 'v1' => Array(
                     'plugins' => Array(
-                        'titlecounter' => Array(
+                        '<%= name %>' => Array(
                             'enable' => True
                         )
                     )
