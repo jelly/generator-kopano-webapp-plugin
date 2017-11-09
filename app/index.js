@@ -31,7 +31,6 @@ module.exports = class extends Generator {
       message : 'PHP pluginn',
     }]).then((answers) => {
       answers.classname = 'Plugin' + capitalizeFirstLetter(answers.name);
-      this.log(answers);
       const basepath = answers.name;
 
       if (answers.php) {
