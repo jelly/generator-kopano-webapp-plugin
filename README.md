@@ -24,6 +24,7 @@ The Yeoman generator supports the following command:
 
 ```
 $ yo kopano-webapp
+```
 
 ## License
 
