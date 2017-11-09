@@ -20,7 +20,7 @@ npm i -g generator-kopano-webapp
 
 ## Usage
 
-The Yeoman generator supports the follwing command:
+The Yeoman generator supports the following command:
 
 ```
 $ yo kopano-webapp
