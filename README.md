@@ -15,7 +15,7 @@ npm i -g yo
 With Node.js and Yeoman installed, you can run this command:
 
 ```
-npm i -g generator-kopano-webapp-plugin
+npm i -g generator-kopano-webapp
 ```
 
 ## Usage
