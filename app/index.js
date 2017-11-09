@@ -32,32 +32,33 @@ module.exports = class extends Generator {
     }]).then((answers) => {
       answers.classname = 'Plugin' + capitalizeFirstLetter(answers.name);
       this.log(answers);
+      const basepath = answers.name;
 
       if (answers.php) {
-        mkdirp.sync('php');
+        mkdirp.sync(basepath + '/php');
         this.fs.copyTpl(
           this.templatePath('_plugin.php'),
-            this.destinationPath('php/plugin.' + answers.name + '.php'),
+            this.destinationPath(basepath + '/php/plugin.' + answers.name + '.php'),
              answers
         );
       }
 
-      mkdirp.sync('js');
+      mkdirp.sync(basepath + 'js');
       this.fs.copyTpl(
         this.templatePath('_manifest.xml'),
-          this.destinationPath('manifest.xml'),
+          this.destinationPath(basepath + '/manifest.xml'),
             answers
       );
 
       this.fs.copyTpl(
         this.templatePath('_plugin.js'),
-          this.destinationPath('js/' + answers.name + '.js'),
+          this.destinationPath(basepath + '/js/' + answers.name + '.js'),
             answers
       );
 
       this.fs.copy(
         this.templatePath('_build.xml'),
-         this.destinationPath('build.xml')
+         this.destinationPath(basepath + '/build.xml')
       );
     });
   }
