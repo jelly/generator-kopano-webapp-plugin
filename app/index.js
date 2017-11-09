@@ -1,7 +1,6 @@
 const mkdirp = require("mkdirp");
 const Generator = require('yeoman-generator');
-
-const capitalizeFirstLetter = (name) => name.charAt(0).toUpperCase() + name.slice(1);
+const capitalize = require('capitalize-first-letter');
 
 module.exports = class extends Generator {
   prompting() {
@@ -30,7 +29,7 @@ module.exports = class extends Generator {
       name    : 'php',
       message : 'PHP pluginn',
     }]).then((answers) => {
-      answers.classname = 'Plugin' + capitalizeFirstLetter(answers.name);
+      answers.classname = 'Plugin' + capitalize(answers.name);
       const basepath = answers.name;
 
       if (answers.php) {
