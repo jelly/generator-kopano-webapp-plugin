@@ -4,7 +4,7 @@ Ext.namespace('Zarafa.plugins.<%= name %>');
  * @class Zarafa.plugins.<%= name %>.<%= classname %>
  * @extends Zarafa.core.Plugin
  */
-Zarafa.plugins.<%= name %>.%<%= classname %> = Ext.extend(Zarafa.core.Plugin, {
+Zarafa.plugins.<%= name %>.<%= classname %> = Ext.extend(Zarafa.core.Plugin, {
 	/**
 	 * @protected
 	 */
