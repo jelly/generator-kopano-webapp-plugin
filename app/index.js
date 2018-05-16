@@ -41,7 +41,7 @@ module.exports = class extends Generator {
         );
       }
 
-      mkdirp.sync(basepath + 'js');
+      mkdirp.sync(basepath + '/js');
       this.fs.copyTpl(
         this.templatePath('_manifest.xml'),
           this.destinationPath(basepath + '/manifest.xml'),
