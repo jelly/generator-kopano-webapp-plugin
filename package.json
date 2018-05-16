@@ -1,6 +1,6 @@
 {
   "name": "generator-kopano-webapp",
-  "version": "0.1.5",
+  "version": "0.1.6",
   "description": "Kopano WebApp Plugin Generator",
   "homepage": "https://github.com/jelly/generator-kopano-webapp-plugin",
   "bugs": "https://github.com/jelly/generator-kopano-webapp-plugin/issues",
